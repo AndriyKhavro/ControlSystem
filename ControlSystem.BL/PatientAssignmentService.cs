@@ -11,27 +11,24 @@ namespace ControlSystem.BL
     public class PatientAssignmentService : IPatientAssignmentService
     {
         private readonly IRepository<ExerciseSchedule> _repository;
+        private readonly IPartOfDayResolver _partOfDayResolver;
 
-        public PatientAssignmentService(IRepository<ExerciseSchedule> repository)
+        public PatientAssignmentService(IRepository<ExerciseSchedule> repository, IPartOfDayResolver partOfDayResolver)
         {
             _repository = repository;
+            _partOfDayResolver = partOfDayResolver;
         }
 
         public IEnumerable<ExerciseAssignment> GetCurrentAssignment(DateTime date, PartOfDay partOfDay)
         {
-            var currentSchedule = _repository.GetAll().FirstOrDefault(s => s.Date == date);
-
-            switch (partOfDay)
+            var workoutPropertyName = _partOfDayResolver.ResolveWorkoutPropertyName(partOfDay);
+            var currentSchedule = _repository.GetAll($"{workoutPropertyName}.Assignments.Exercise").FirstOrDefault(s => s.Date == date.Date);
+            if (currentSchedule == null)
             {
-                case PartOfDay.Morning:
-                    return currentSchedule?.MorningWorkout.Assignments;
-                case PartOfDay.Afternoon:
-                    return currentSchedule?.AfternoonWorkout.Assignments;
-                case PartOfDay.Evening:
-                    return currentSchedule?.EveningWorkout.Assignments;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(partOfDay));
+                return new ExerciseAssignment[0];
             }
+
+            return _partOfDayResolver.ResolveWorkout(currentSchedule, partOfDay).Assignments;
         }
     }
 }

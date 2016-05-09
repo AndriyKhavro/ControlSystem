@@ -136,10 +136,13 @@ namespace ControlSystem.UI
                 EveningWorkout = new Workout
                 {
                     Assignments = GetAssignments(eveningGridView).ToArray()
-                }
+                },
+                Date = dateTimePicker1.Value.Date
             };
 
             _timeTableService.SaveExerciseSchedule(exerciseSchedule);
+
+            MessageBox.Show("Збережено :)");
         }
 
 

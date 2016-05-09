@@ -1,0 +1,12 @@
+﻿<div ng-show="$ctrl.isLoaded">
+    <div ng-if="$ctrl.anyAssignments">
+        <assignment exercise="$ctrl.currentAssignment"></assignment>
+        <button disabled="disabled">Виконано!</button>    
+    </div>
+    <div ng-if="!$ctrl.anyAssignments">
+        Немає вправ на сьогодні...
+    </div>
+</div>
+<div ng-show="!$ctrl.isLoaded">
+    Завантаження вправ...
+</div>

@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPartOfDayResolver.cs" />
     <Compile Include="IPatientAssignmentService.cs" />
     <Compile Include="ITimeTableService.cs" />
+    <Compile Include="PartOfDayResolver.cs" />
     <Compile Include="PatientAssignmentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TimeTableService.cs" />

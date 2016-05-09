@@ -22,6 +22,7 @@ namespace ControlSystem.DA
             : base("ControlSystemContext")
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ControlSystemContext, Configuration>());
+            Configuration.LazyLoadingEnabled = false;
             //Database.SetInitializer(new DropCreateDatabaseAlways<ControlSystemContext>());
         }
 

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
-using Newtonsoft.Json.Serialization;
+﻿using System.Web.Http;
 using Owin;
 
 namespace ControlSystem.PatientClient
@@ -15,15 +10,12 @@ namespace ControlSystem.PatientClient
         public void Configuration(IAppBuilder appBuilder)
         {
             // Configure Web API for self-host. 
-            HttpConfiguration config = new HttpConfiguration();
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
-            config.Formatters.JsonFormatter.SerializerSettings.ContractResolver =
-                new CamelCasePropertyNamesContractResolver();
 
+            HttpConfiguration config = new HttpConfiguration();
+            
+            UnityConfig.RegisterComponents(config);
+            WebApiConfig.Register(config);
+            
             appBuilder.UseWebApi(config);
         }
     }
