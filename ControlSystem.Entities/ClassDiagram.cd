@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="ControlSystem.Entities.Diagnosis">
+    <Position X="0.5" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAGAAEAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Diagnosis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ControlSystem.Entities.Exercise">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQAAAAAgAAAEAAAAAAQAEAIAEBAAAAAAAAAAAEA=</HashCode>
+      <FileName>Exercise.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ControlSystem.Entities.ExerciseAssignment">
+    <Position X="7.75" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAEAAAAAIAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>ExerciseAssignment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ControlSystem.Entities.ExerciseHistory">
+    <Position X="4.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAEAAAAAAAAAAAABAAAAAAEIASQ=</HashCode>
+      <FileName>ExerciseHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ControlSystem.Entities.ExerciseSchedule">
+    <Position X="8" Y="3" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAABAAAAAAAAAAAAAAAAAAAAQAAAAAAAIBAAAAA=</HashCode>
+      <FileName>ExerciseSchedule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ControlSystem.Entities.Workout">
+    <Position X="4.25" Y="3.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Workout.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ControlSystem.Entities.ExerciseComplexity">
+    <Position X="5.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECAAAAAAAAAAAAAAAAgAAAAAAAAAAAAkAAA=</HashCode>
+      <FileName>ExerciseComplexity.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ControlSystem.Entities.Feeling">
+    <Position X="7.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAAAAACA=</HashCode>
+      <FileName>Feeling.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ControlSystem.Entities.PatientState">
+    <Position X="3.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>PatientState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

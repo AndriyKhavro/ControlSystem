@@ -1,0 +1,9 @@
+{
+	"version": "1.0.0",
+	"name": "ControlSystem",
+	"private": true,
+    "devDependencies": {
+        "angular": "~1.5.5",
+        "angular-ui-router": "~0.2.18"
+    }
+}
