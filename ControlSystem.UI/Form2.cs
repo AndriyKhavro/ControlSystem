@@ -115,7 +115,8 @@ namespace ControlSystem.UI
                     .Select(row => new ExerciseAssignment
                     {
                         Exercise = (Exercise) row.Cells[0].Value,
-                        ExpectedSets = int.Parse((string) row.Cells[1].Value)
+                        ExpectedSets = int.Parse((string) row.Cells[1].Value),
+                        ExpectedReps = int.Parse((string) row.Cells[2].Value)
                     });
         }
 
