@@ -1,7 +1,12 @@
 ﻿<div ng-show="$ctrl.isLoaded">
     <div ng-if="$ctrl.anyAssignments">
         <assignment exercise="$ctrl.currentAssignment"></assignment>
-        <button disabled="disabled">Виконано!</button>    
+        <button ng-show="!$ctrl.isStarted" ng-click="$ctrl.startExercise()">Розпочати виконання вправи</button>
+        <div ng-show="$ctrl.isStarted">
+            <div class="stopWatch numbers">{{$ctrl.options.elapsedTime | stopwatchTime}}</div>
+            <div><button>Виконано!</button></div>
+        </div>
+
     </div>
     <div ng-if="!$ctrl.anyAssignments">
         Немає вправ на сьогодні...

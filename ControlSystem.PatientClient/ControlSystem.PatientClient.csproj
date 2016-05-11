@@ -128,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="ui\app.css" />
     <Content Include="ui\exercise\assignment.component.js" />
     <Content Include="ui\exercise\assignment.html" />
     <Content Include="ui\exercise\exercise.service.js" />
@@ -144,6 +145,8 @@
   <ItemGroup>
     <Content Include="ui\app.js" />
     <Content Include="index.html" />
+    <Content Include="ui\stopwatch\stopwatch.service.js" />
+    <Content Include="ui\stopwatch\stopwatchTime.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

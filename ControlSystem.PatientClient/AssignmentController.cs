@@ -17,9 +17,9 @@ namespace ControlSystem.PatientClient
         }
 
         [HttpGet]
-        public IEnumerable<ExerciseAssignmentDto> Get(DateTime date, PartOfDay partOfDay)
+        public IEnumerable<ExerciseAssignmentDto> Get()
         {
-            return _assignmentService.GetCurrentAssignment(date, partOfDay).Select(a => new ExerciseAssignmentDto
+            return _assignmentService.GetCurrentAssignment().Select(a => new ExerciseAssignmentDto
             {
                 Name = a.Exercise.Name,
                 Description = a.Exercise.Description,

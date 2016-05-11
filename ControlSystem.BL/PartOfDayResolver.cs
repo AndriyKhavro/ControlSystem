@@ -5,34 +5,30 @@ namespace ControlSystem.BL
 {
     public class PartOfDayResolver: IPartOfDayResolver
     {
-        public Workout ResolveWorkout(ExerciseSchedule schedule, PartOfDay partOfDay)
+        public Workout ResolveWorkout(ExerciseSchedule schedule, DateTime dateTime)
         {
-            switch (partOfDay)
+            if (dateTime.Hour < 12)
             {
-                case PartOfDay.Morning:
-                    return schedule.MorningWorkout;
-                case PartOfDay.Afternoon:
-                    return schedule.AfternoonWorkout;
-                case PartOfDay.Evening:
-                    return schedule.EveningWorkout;
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(partOfDay));
+                return schedule.MorningWorkout;
             }
+            if (dateTime.Hour >= 12 && dateTime.Hour < 18)
+            {
+                return schedule.AfternoonWorkout;
+            }
+            return schedule.EveningWorkout;
         }
 
-        public string ResolveWorkoutPropertyName(PartOfDay partOfDay)
+        public string ResolveWorkoutPropertyName(DateTime dateTime)
         {
-            switch (partOfDay)
+            if (dateTime.Hour < 12)
             {
-                case PartOfDay.Morning:
-                    return "MorningWorkout";
-                case PartOfDay.Afternoon:
-                    return "AfternoonWorkout";
-                case PartOfDay.Evening:
-                    return "EveningWorkout";
-                default:
-                    throw new ArgumentOutOfRangeException(nameof(partOfDay));
+                return "MorningWorkout";
             }
+            if (dateTime.Hour >= 12 && dateTime.Hour < 18)
+            {
+                return "AfternoonWorkout";
+            }
+            return "EveningWorkout";
         }
     }
 }

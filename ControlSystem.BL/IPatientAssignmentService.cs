@@ -6,6 +6,6 @@ namespace ControlSystem.BL
 {
     public interface IPatientAssignmentService
     {
-        IEnumerable<ExerciseAssignment> GetCurrentAssignment(DateTime date, PartOfDay partOfDay);
+        IEnumerable<ExerciseAssignment> GetCurrentAssignment();
     }
 }

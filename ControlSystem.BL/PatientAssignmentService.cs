@@ -19,16 +19,17 @@ namespace ControlSystem.BL
             _partOfDayResolver = partOfDayResolver;
         }
 
-        public IEnumerable<ExerciseAssignment> GetCurrentAssignment(DateTime date, PartOfDay partOfDay)
+        public IEnumerable<ExerciseAssignment> GetCurrentAssignment()
         {
-            var workoutPropertyName = _partOfDayResolver.ResolveWorkoutPropertyName(partOfDay);
-            var currentSchedule = _repository.GetAll($"{workoutPropertyName}.Assignments.Exercise").FirstOrDefault(s => s.Date == date.Date);
+            var now = DateTime.Now;
+            var workoutPropertyName = _partOfDayResolver.ResolveWorkoutPropertyName(now);
+            var currentSchedule = _repository.GetAll($"{workoutPropertyName}.Assignments.Exercise").FirstOrDefault(s => s.Date == now.Date);
             if (currentSchedule == null)
             {
                 return new ExerciseAssignment[0];
             }
 
-            return _partOfDayResolver.ResolveWorkout(currentSchedule, partOfDay).Assignments;
+            return _partOfDayResolver.ResolveWorkout(currentSchedule, now).Assignments;
         }
     }
 }

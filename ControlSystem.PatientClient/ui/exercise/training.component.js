@@ -6,11 +6,18 @@
         controller: TrainingController
 });
 
-    TrainingController.$inject = ['controlSystem.exerciseService'];
+    TrainingController.$inject = ['controlSystem.exerciseService', 'controlSystem.stopwatch'];
 
-    function TrainingController(exerciseService) {
+    function TrainingController(exerciseService, Stopwatch) {
         var vm = this;
         vm.isLoaded = false;
+        vm.isStarted = false;
+        vm.startExercise = function () {
+            vm.options = {};
+            var stopwatch = new Stopwatch(vm.options);
+            stopwatch.startTimer();
+            vm.isStarted = true;
+        }
 
         vm.assignments = [];
         exerciseService.getAssignments()
