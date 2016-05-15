@@ -25,10 +25,10 @@
         vm.finishExercise = function () {
             vm.currentState.currentAssignment.time = _formatTime(vm.options.elapsedTime);
             stopwatch.resetTimer();
+            vm.options = {};
+            vm.isStarted = false;
             currentStateService.finishExercise();
         }
-
-        
 
         function _formatTime(dateTime) {
             return dateTime.getUTCHours() + ':' + dateTime.getUTCMinutes() + ':' + dateTime.getUTCSeconds();
