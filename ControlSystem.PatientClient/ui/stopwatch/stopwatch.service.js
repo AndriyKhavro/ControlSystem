@@ -52,7 +52,7 @@
                 self.resetTimer = function() {
                     startTime = new Date().getTime();
                     options.elapsedTime.setTime(0);
-                    timeElapsed = offset = 0;
+                    offset = 0;
                 };
 
                 self.cancelTimer = function() {

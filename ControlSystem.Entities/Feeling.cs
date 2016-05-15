@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace ControlSystem.Entities
+﻿namespace ControlSystem.Entities
 {
     public enum Feeling
     {
-        NoPain,
-        MediumPain,
-        StrongPain
+        None = 0,
+        NoPain = 1,
+        MediumPain = 2,
+        StrongPain = 3
     }
 }

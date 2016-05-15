@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ControlSystem.Entities
 {
     public class ExerciseHistory
     {
         public int ExerciseHistoryId { get; set; }
+        
+        public int ExerciseAssignmentId { get; set; }
 
-        public virtual ExerciseAssignment ExerciseAssignment { get; set; }
+        public int ActualSets { get; set; }
 
-        public int ActualRepeat1 { get; set; }
-
-        public int ActualRepeat2 { get; set; }
+        public int ActualReps { get; set; }
 
         public TimeSpan Time { get; set; }
 

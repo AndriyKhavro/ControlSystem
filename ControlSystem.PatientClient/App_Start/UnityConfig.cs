@@ -23,6 +23,7 @@ namespace ControlSystem.PatientClient
             container.RegisterType(typeof(IRepository<>), typeof(Repository<>));
             container.RegisterType<IPatientAssignmentService, PatientAssignmentService>();
             container.RegisterType<IPartOfDayResolver, PartOfDayResolver>();
+            container.RegisterType<IExerciseHistoryService, ExerciseHistoryService>();
 
             config.DependencyResolver = new UnityDependencyResolver(container);
         }

@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExerciseHistoryService.cs" />
+    <Compile Include="IExerciseHistoryService.cs" />
     <Compile Include="IPartOfDayResolver.cs" />
     <Compile Include="IPatientAssignmentService.cs" />
     <Compile Include="ITimeTableService.cs" />
