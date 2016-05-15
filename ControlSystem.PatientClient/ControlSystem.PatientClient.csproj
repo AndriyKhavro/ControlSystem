@@ -130,8 +130,6 @@
     <Content Include="packages.config" />
     <Content Include="ui\app.css" />
     <Content Include="ui\common\constants.js" />
-    <Content Include="ui\common\rate.html" />
-    <Content Include="ui\common\rate.js" />
     <Content Include="ui\exercise\assignment.component.js" />
     <Content Include="ui\exercise\assignment.html" />
     <Content Include="ui\exercise\currentStateService.js" />

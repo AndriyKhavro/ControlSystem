@@ -1,8 +1,0 @@
-﻿<div class="rate" ng-class="rateCtrl.size">
-    <rating ng-model="rateCtrl.rate" max="rateCtrl.max" readonly="rateCtrl.isReadOnly"
-            on-hover="rateCtrl.onHover(value)" on-leave="rateCtrl.onLeave()"></rating>
-    <span class="label rateLabel" ng-show="rateCtrl.displayValue"
-          ng-class="{'label-warning': rateCtrl.value <= rateCtrl.max * 0.5,
-					 'label-info': rateCtrl.value > rateCtrl.max * 0.5 && rateCtrl.value < rateCtrl.max * 0.8,
-					 'label-success': rateCtrl.value >= rateCtrl.max * 0.8 }">{{rateCtrl.displayValue}}</span>
-</div>

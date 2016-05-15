@@ -3,7 +3,7 @@
         <span>
             Оцініть якість виконання вправи:
         </span>
-        <rate rate="$ctrl.evaluation.grade"></rate>
+        <rating ng-model="$ctrl.evaluation.grade" max="5"></rating>
         <select name="singleSelect" ng-model="$ctrl.evaluation.feeling">
             <option value="noPain">Немає болі</option>
             <option value="mediumPain">Помірний біль</option>
