@@ -52,7 +52,8 @@ namespace ControlSystem.DA.Migrations
             var e1 = new Exercise
             {
                 Name = "Підйом п'яток",
-                Diagnoses = new List<Diagnosis>()
+                Diagnoses = new List<Diagnosis>(),
+                Description = "Тут буде опис"
             };
 
             e1.Diagnoses.Add(d1);
