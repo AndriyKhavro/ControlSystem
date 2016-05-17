@@ -19,6 +19,8 @@ namespace ControlSystem.Entities
 
         public byte[] Image { get; set; }
 
+        public string VideoUrl { get; set; }
+
         public virtual ICollection<Diagnosis> Diagnoses { get; set; }
 
         public virtual ICollection<ExerciseAssignment> Assignments { get; set;} 

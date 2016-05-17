@@ -27,7 +27,8 @@ namespace ControlSystem.PatientClient
                 Name = a.Exercise.Name,
                 Description = a.Exercise.Description,
                 ExpectedReps = a.ExpectedReps,
-                ExpectedSets = a.ExpectedSets
+                ExpectedSets = a.ExpectedSets,
+                VideoUrl = a.Exercise.VideoUrl
             });
         }
 
@@ -46,5 +47,7 @@ namespace ControlSystem.PatientClient
         public string Description { get; set; }
         public int ExpectedSets { get; set; }
         public int ExpectedReps { get; set; }
+        public string VideoUrl { get; set; }
+        public bool IsAlreadyDone { get; set; }
     }
 }

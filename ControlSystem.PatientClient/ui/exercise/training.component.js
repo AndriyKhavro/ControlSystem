@@ -6,9 +6,9 @@
         controller: TrainingController
     });
 
-    TrainingController.$inject = ['currentStateService', 'controlSystem.stopwatch'];
+    TrainingController.$inject = ['currentStateService', 'controlSystem.stopwatch', '$sce'];
 
-    function TrainingController(currentStateService, Stopwatch) {
+    function TrainingController(currentStateService, Stopwatch, $sce) {
         var vm = this;
         var stopwatch;
         vm.currentState = currentStateService.currentState;

@@ -56,16 +56,36 @@ namespace ControlSystem.DA.Migrations
                 Description = "Тут буде опис"
             };
 
-            e1.Diagnoses.Add(d1);
+            var e2 = new Exercise
+            {
+                Name = "Присідання",
+                Diagnoses = new List<Diagnosis>(),
+                Description = "Тут буде опис присідань",
+                VideoUrl = @"http://www.youtube.com/embed/MUIxtItGioU"
+            };
+
+            var e3 = new Exercise
+            {
+                Name = "Планка",
+                Diagnoses = new List<Diagnosis>(),
+                Description = "Тут буде опис планки",
+                VideoUrl = @"http://www.youtube.com/embed/pNsb32LhufE"
+            };
+            
             d1.Exercises.Add(e1);
+            d1.Exercises.Add(e2);
+            d1.Exercises.Add(e3);
+
+            e1.Diagnoses.Add(d1);
+            e2.Diagnoses.Add(d1);
+            e3.Diagnoses.Add(d1);
 
             context.Diagnoses.AddOrUpdate(d => d.Name, d1, d2, d3);
 
             context.Exercises.AddOrUpdate(e => e.Name,
-                e1);
+                e1, e2, e3);
 
             context.SaveChanges();
-
         }
     }
 }
