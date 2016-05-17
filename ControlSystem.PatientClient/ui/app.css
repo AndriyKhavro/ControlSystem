@@ -16,3 +16,16 @@
 	font-family: digital, arial, verdana;
 	color: black;
 }
+
+.exercise-button {
+    margin-top: 20px;
+}
+
+.exercise-container {
+    width: 300px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-left: 300px;
+}

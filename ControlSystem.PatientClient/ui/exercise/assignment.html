@@ -5,13 +5,15 @@
     <h2>
         {{$ctrl.exercise.name}}
     </h2>
-    <div>
+    <div class="col-md-4">
+        <div>
+            Кількість підходів: {{$ctrl.exercise.expectedSets}}
+        </div>
+        <div>
+            Кількість повторень: {{$ctrl.exercise.expectedReps}}
+        </div>
+    </div>
+    <div class="col-md-8">
         {{$ctrl.exercise.description}}
-    </div>
-    <div>
-        Кількість підходів: {{$ctrl.exercise.expectedSets}}
-    </div>
-    <div>
-        Кількість повторень: {{$ctrl.exercise.expectedReps}}
     </div>
 </div>

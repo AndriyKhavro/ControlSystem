@@ -1,4 +1,4 @@
-﻿<div ng-show="$ctrl.isLoaded">
+﻿<div ng-show="$ctrl.isLoaded" class="container">
     <div ng-if="$ctrl.currentState.isTrainingFinished">
         Тренування закінчено!
     </div>
@@ -6,13 +6,16 @@
         <div ng-if="$ctrl.currentState.anyAssignments">
             <div ng-if="$ctrl.currentState.isExecuting">
                 <assignment exercise="$ctrl.currentState.currentAssignment"></assignment>
-                <button ng-show="!$ctrl.isStarted" ng-click="$ctrl.startExercise()">Розпочати виконання вправи</button>
-                <div ng-show="$ctrl.isStarted">
-                    <div class="stopWatch numbers">{{$ctrl.options.elapsedTime | stopwatchTime}}</div>
-                    <div>
-                        <button ng-click="$ctrl.finishExercise()">Виконано!</button>
+                <div style="width: 300px; margin: 0 auto">
+                    <button class="exercise-button" ng-show="!$ctrl.isStarted" ng-click="$ctrl.startExercise()">Розпочати виконання вправи</button>
+                    <div ng-show="$ctrl.isStarted">
+                        <div class="stopWatch numbers">{{$ctrl.options.elapsedTime | stopwatchTime}}</div>
+                        <div class="exercise-button">
+                            <button ng-click="$ctrl.finishExercise()">Виконано!</button>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <div ng-if="!$ctrl.currentState.isExecuting">
                 <exercise-evaluation exercise="$ctrl.currentState.currentAssignment"></exercise-evaluation>
