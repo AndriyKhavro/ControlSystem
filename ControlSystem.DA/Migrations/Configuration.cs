@@ -51,9 +51,10 @@ namespace ControlSystem.DA.Migrations
 
             var e1 = new Exercise
             {
-                Name = "Підйом п'яток",
+                Name = "Віджимання",
                 Diagnoses = new List<Diagnosis>(),
-                Description = "Тут буде опис"
+                Description = "Тут буде опис віджимань",
+                VideoUrl = @"http://www.youtube.com/embed/9Xa29bU7x08"
             };
 
             var e2 = new Exercise

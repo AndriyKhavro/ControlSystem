@@ -19,13 +19,17 @@
 
 .exercise-button {
     margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .exercise-container {
-    width: 300px;
+    width: 550px;
     margin: 0 auto;
+    text-align: center;
+    border-radius: 35px;
+    border: 2px solid #094D82;
 }
 
-h2 {
-    margin-left: 300px;
+h3 {
+    margin-top: 10px;
 }

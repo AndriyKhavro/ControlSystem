@@ -1,11 +1,13 @@
 ﻿<div>
     <div>
+        <br />
         <div>
             <span>
                 Оцініть якість виконання вправи:
             </span>
             <rating ng-model="$ctrl.evaluation.grade" max="5"></rating>
         </div>
+        <br/>
         <div>
             <span>Чи відчували Ви біль?</span>
             <select name="singleSelect" ng-model="$ctrl.evaluation.feeling">
@@ -13,9 +15,9 @@
                 <option value="mediumPain">Помірний біль</option>
                 <option value="strongPain">Сильний біль</option>
             </select>
-        </div>        
+        </div>
     </div>
     <div>
-        <button ng-click="$ctrl.goToNextExercise()">Наступна вправа</button>
+        <button class="exercise-button" ng-click="$ctrl.goToNextExercise()">Наступна вправа</button>
     </div>
 </div>
